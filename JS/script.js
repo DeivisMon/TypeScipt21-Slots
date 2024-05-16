@@ -39,7 +39,7 @@ function stopSpinAnimation() {
 function spinSections() {
     startSpinAnimation();
 
-    const spins = 15;
+    const spins = 10;
     const delay = 200;
     const spinDelays = [0, 50, 150];
     let spinCount = 0;

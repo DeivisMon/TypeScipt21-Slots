@@ -103,7 +103,7 @@ body {
   position: relative;
 }
 button, input {
-  opacity: 0.95;
+  opacity: 0.98;
   color: #f0f2f4;
   margin-right: 20px;
   padding: 20px;
@@ -115,12 +115,14 @@ button, input {
   }
 }
 #spin-btn {
+  position: absolute;
   bottom: 20px;
   right: 700px;
 }
 #bet-btn {
+  position: absolute;
   bottom: 20px;
-  left: 930px;
+  left: 910px;
 }
 #bet-input {
   bottom: 20px;
@@ -168,10 +170,11 @@ input {
   bottom: 200px;
   left: 500px;
   width: 170px;
+  height: 120px;
   border-radius: 8px;
   background: linear-gradient(175deg, #03a9f4, #f441a5, #03a9f4);
   animation: anima 8s linear infinite;
-  transform: translate(5%) skew(6deg);
+  transform: translate(5%) skew(4deg);
   z-index: 50;
 }
 
