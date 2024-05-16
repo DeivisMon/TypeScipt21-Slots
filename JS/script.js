@@ -99,7 +99,7 @@ betBtn.addEventListener("click", function() {
         playerMoney -= betAmount;
         playerMoneyDisplay.textContent = playerMoney;
     } else {
-        alert("Invalid bet amount!");
+        text.textContent ="Invalid bet amount!";
     }
 });
 
