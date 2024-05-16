@@ -1,49 +1,80 @@
-button {
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
-  border: .25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 15px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em .25em var(--glow-color),
-  0 0 4em 1em var(--glow-spread-color),
-  inset 0 0 .75em .25em var(--glow-color);
-  text-shadow: 0 0 .5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
+@mixin d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-button::after {
-  pointer-events: none;
+#bet-btn {
+  text-decoration: none;
+  position: absolute;
+  left: 850px;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  width: 95px;
+  height: 75px;
+  text-align: center;
+  @include d-flex;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+  border-radius: 50%;
+  z-index: 25;
+}
+#bet-btn:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+}
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+#bet-btn:before {
   content: "";
   position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: .7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 15px;
+  transition: 1s;
+}
+#bet-btn:hover::before {
+  filter: blur(20px);
+}
+#bet-btn:active {
+  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
 
-button:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em .25em var(--glow-color),
-  0 0 4em 2em var(--glow-spread-color),
-  inset 0 0 .75em .25em var(--glow-color);
+#spin-btn {
+  position: absolute;
+  left: 1050px;
+  top: 775px;
+  width: 200px;
+  height: 120px;
+  z-index: 25;
+  border-radius: 8px;
+  background: linear-gradient(185deg, #03a9f4, #f441a5, #03a9f4);
+  animation: anima 8s linear infinite;
+  transform: translate(5%) skew(0deg);
+  &:active {
+    transform: scale(0.98 );
+  }
 }
 
-button:active {
-  box-shadow: 0 0 0.6em .25em var(--glow-color),
-  0 0 2.5em 2em var(--glow-spread-color),
-  inset 0 0 .5em .25em var(--glow-color);
+@keyframes anima {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }
-

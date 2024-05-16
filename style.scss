@@ -100,10 +100,11 @@ body {
 
 .bottom {
   margin-top: 20px;
+  position: relative;
 }
 button, input {
-  position: absolute;
-  z-index: 20;
+  opacity: 0.95;
+  color: #f0f2f4;
   margin-right: 20px;
   padding: 20px;
   @include border;
@@ -162,3 +163,24 @@ button, input {
     scale: 1;
   }
 }
+input {
+  position: absolute;
+  bottom: 200px;
+  left: 500px;
+  width: 170px;
+  border-radius: 8px;
+  background: linear-gradient(175deg, #03a9f4, #f441a5, #03a9f4);
+  animation: anima 8s linear infinite;
+  transform: translate(5%) skew(6deg);
+  z-index: 50;
+}
+
+@keyframes anima {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
