@@ -1,3 +1,4 @@
+@import "buttons";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -31,10 +32,10 @@ body {
   @include d-flex;
   margin-top: 188px;
   text-align: center;
-  background-color: #212121;
+  background-color: rgb(24,21,22,);
   width: 380px;
   height: 350px;
-  box-shadow: inset 1px 1px 5px 10px rgb(188, 41, 41);
+  box-shadow: inset 1px 1px 5px 5px rgb(188, 41, 41);
 }
 .overlay {
   position: absolute;
@@ -72,7 +73,7 @@ body {
   height: 105px;
   //@include border;
   box-shadow: inset 2px 2px 3px 3px black;
-  margin: 0 8px;
+  margin: 0 5px;
   background-image: url("./img/seven.png");
   background-position: 50% 40%;
   background-size: 50px;
@@ -161,5 +162,3 @@ button, input {
     scale: 1;
   }
 }
-
-
